@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="TestingwithTestNG(failed)">
+    <classes>
+      <class name="testNGpackage.SmokeTests">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="loginOnUat"/>
+          <include name="verifyPageTitle"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- testNGpackage.SmokeTests -->
+    </classes>
+  </test> <!-- TestingwithTestNG(failed) -->
+</suite> <!-- Failed suite [Suite] -->

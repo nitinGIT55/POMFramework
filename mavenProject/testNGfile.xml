@@ -1,0 +1,8 @@
+<suite name="Suite" parallel="false">
+  <test name="TestingwithTestNG">
+    <classes>
+      <class name="testNGpackage.SmokeTests"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

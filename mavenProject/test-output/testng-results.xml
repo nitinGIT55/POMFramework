@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="78357" started-at="2020-01-25T18:35:25Z" finished-at="2020-01-25T18:36:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="78357" started-at="2020-01-25T18:35:25Z" finished-at="2020-01-25T18:36:44Z">
+      <class name="testNGpackage.SmokeTests">
+        <test-method status="PASS" signature="setUpBrowser()[pri:-1, instance:testNGpackage.SmokeTests@29ee9faa]" name="setUpBrowser" duration-ms="69095" started-at="2020-01-26T00:05:26Z" description="This test is setting up the browser and printing the title" finished-at="2020-01-26T00:06:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:0, instance:testNGpackage.SmokeTests@29ee9faa]" name="verifyPageTitle" duration-ms="17" started-at="2020-01-26T00:06:35Z" description="This test will get the title of the page " finished-at="2020-01-26T00:06:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="loginOnUat()[pri:1, instance:testNGpackage.SmokeTests@29ee9faa]" name="loginOnUat" duration-ms="9134" started-at="2020-01-26T00:06:35Z" description="This test will enter username,password and then login" finished-at="2020-01-26T00:06:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOnUat -->
+      </class> <!-- testNGpackage.SmokeTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
