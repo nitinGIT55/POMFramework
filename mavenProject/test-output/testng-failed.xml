@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="TestingwithTestNG(failed)">
     <classes>
       <class name="testNGpackage.SmokeTests">
         <methods>
-          <include name="verifyPageTitle"/>
+          <include name="setUpBrowser"/>
+          <include name="searchingClient"/>
         </methods>
       </class> <!-- testNGpackage.SmokeTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TestingwithTestNG(failed) -->
+</suite> <!-- Failed suite [Suite] -->

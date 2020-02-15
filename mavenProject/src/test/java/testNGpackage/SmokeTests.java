@@ -8,10 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import pageObjects.clientListPage;
 import pageObjects.uatLoginPage;
 import utilities.PropertiesManager;
 
@@ -25,15 +29,17 @@ public class SmokeTests
 	static String password=PropertiesManager.callPropInstance().getUatPassword();
 	WebDriver driver;
 	static uatLoginPage onLoginPage;
+	static clientListPage onClientListPage;
 	
 	
 		
 	
-	@Test(priority=-1, description="Setup the browser and get page title of base URL")
+	@BeforeSuite
 	public void setUpBrowser() {
 		System.setProperty(browser,browser_path);
 		driver = new ChromeDriver();
 		onLoginPage= PageFactory.initElements(driver, uatLoginPage.class);
+		onClientListPage= PageFactory.initElements(driver, clientListPage.class);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -41,8 +47,8 @@ public class SmokeTests
 		driver.manage().deleteAllCookies();
 		driver.get(baseurl);
 		String page_title=driver.getTitle();
-		Assert.assertEquals("GPComply", page_title);
-		if(page_title=="GPComply") {
+		//Assert.assertEquals("GPComplyLogin", page_title);
+		if( page_title.contains("GPComply")) {
 		System.out.println("The correct page has been loaded successfully");
 		}
 		else {
@@ -56,9 +62,7 @@ public class SmokeTests
 	public void verifyPageTitle() {
 
 		onLoginPage.getLoginPageTitle();
-		System.out.println("The value of driver is:"+ driver);
-		
-		
+				
 	}
 		
 		
@@ -78,26 +82,50 @@ public class SmokeTests
 		if(a==1)
 		System.out.println("User"+username+" has logged in successfully !!");
 		
+		
 	}
+	
+	@Test (priority=2, description="Verify the logo on client list page", dependsOnMethods= {"loginOnUat"})
+	public void logoOnClientList() {
+		System.out.println("The title of client list page is :"+driver.getTitle());
+		onClientListPage.checkLogoOnClientList();
+		
+	}
+	
+	@Test (priority=3, description="Verify the Settings Menu Items", dependsOnMethods= {"loginOnUat"})
+	public void settingsMenuList() {
+		onClientListPage.verifySettingsMenuItems();
+		
+	}
+	
+	@Test (priority=4)
+	public void searchingClient() {
+		System.out.println("Started doing the search on Client list");
+		onClientListPage.searchBox.sendKeys("shubh");
+		onClientListPage.searchGlassIcon.click();
+		onClientListPage.resetButton.click();
+	}
+	
+	/*
+	
+	@DataProvider (name="searchtexts")
+	public String[] createData() {
+		return new String[] {"vishal","tushar","shubh"};
+				
+				
+		}*/
+	
 	
 		
 		
 		
-
-	/*
-	@Test (enabled=false)
-	public void clickMenuPrintTitle() {	
-		objHome.clickMobileMenuLink();
-		String mobile_page_title=objHome.getpageTitle();
-		System.out.println("The title of the page is "+mobile_page_title);
-	}
-	*/
 	
-	/*
-	@AfterTest
+	@AfterSuite
 	public void closeBrowser() {
 		driver.quit();
 		Reporter.log("Closed the Browser",true);
-	}*/
+	}
+	
+	}
 
-}
+

@@ -6,9 +6,7 @@
       <class name="testNGpackage.SmokeTests">
         <methods>
           <include name="setUpBrowser"/>
-          <include name="loginOnUat"/>
-          <include name="verifyPageTitle"/>
-          <include name="closeBrowser"/>
+          <include name="searchingClient"/>
         </methods>
       </class> <!-- testNGpackage.SmokeTests -->
     </classes>

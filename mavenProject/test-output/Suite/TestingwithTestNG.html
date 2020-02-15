@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestingwithTestNG</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jan 25 17:49:16 IST 2020</td>
+<td>Started on:</td><td>Sun Jan 26 01:49:52 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64219 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39882 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testNGpackage.SmokeTests.loginOnUat()'><b>loginOnUat</b><br>Test class: testNGpackage.SmokeTests<br>Test method: This test will enter username,password and then login</td>
-<td><div><pre>java.lang.NullPointerException
-	at testNGpackage.SmokeTests.loginOnUat(SmokeTests.java:62)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace808228639", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace808228639'><pre>java.lang.NullPointerException
-	at testNGpackage.SmokeTests.loginOnUat(SmokeTests.java:62)
+<td title='testNGpackage.SmokeTests.setUpBrowser()'><b>setUpBrowser</b><br>Test class: testNGpackage.SmokeTests<br>Test method: Setup the browser and get page title of base URL</td>
+<td><div><pre>java.lang.AssertionError: expected [Loading...] but found [GPComply]
+	at testNGpackage.SmokeTests.setUpBrowser(SmokeTests.java:48)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace441001942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace441001942'><pre>java.lang.AssertionError: expected [Loading...] but found [GPComply]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at testNGpackage.SmokeTests.setUpBrowser(SmokeTests.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,23 +113,56 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 </pre></div></td>
-<td>0</td>
-<td>testNGpackage.SmokeTests@1d057a39</td></tr>
+<td>28</td>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='testNGpackage.SmokeTests.verifyPageTitle()'><b>verifyPageTitle</b><br>Test class: testNGpackage.SmokeTests<br>Test method: This test will get the title of the page </td>
-<td><div><pre>java.lang.NullPointerException
-	at testNGpackage.SmokeTests.verifyPageTitle(SmokeTests.java:55)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2104973502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2104973502'><pre>java.lang.NullPointerException
-	at testNGpackage.SmokeTests.verifyPageTitle(SmokeTests.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+<td title='testNGpackage.SmokeTests.loginOnUat()'><b>loginOnUat</b><br>Test class: testNGpackage.SmokeTests<br>Test method: This test will enter username,password and then click sign in</td>
+<td></td>
+<td>2</td>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
+<tr>
+<td title='testNGpackage.SmokeTests.logoOnClientList()'><b>logoOnClientList</b><br>Test class: testNGpackage.SmokeTests<br>Test method: Verify the logo on client list page</td>
+<td></td>
+<td>7</td>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
+<tr>
+<td title='testNGpackage.SmokeTests.settingsMenuList()'><b>settingsMenuList</b><br>Test class: testNGpackage.SmokeTests<br>Test method: Verify the Settings Menu Items</td>
+<td></td>
+<td>0</td>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
+<tr>
+<td title='testNGpackage.SmokeTests.verifyPageTitle()'><b>verifyPageTitle</b><br>Test class: testNGpackage.SmokeTests<br>Test method: Verify the page title after login</td>
+<td></td>
+<td>0</td>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testNGpackage.SmokeTests.searchingClient()'><b>searchingClient</b><br>Test class: testNGpackage.SmokeTests</td>
+<td><div><pre>org.testng.TestNGException: 
+Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() must return either Object[][] or Iterator&lt;Object&gt;[], not class [Ljava.lang.String;
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1095352419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1095352419'><pre>org.testng.TestNGException: 
+Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() must return either Object[][] or Iterator&lt;Object&gt;[], not class [Ljava.lang.String;
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:115)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1240)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:980)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1070)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:746)
@@ -143,7 +182,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 </pre></div></td>
 <td>0</td>
-<td>testNGpackage.SmokeTests@1d057a39</td></tr>
+<td>testNGpackage.SmokeTests@cc285f4</td></tr>
 </table><p>
 </body>
 </html>

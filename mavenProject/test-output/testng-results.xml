@@ -1,25 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="1" failed="1" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="78357" started-at="2020-01-25T18:35:25Z" finished-at="2020-01-25T18:36:44Z">
+  <suite name="Suite" duration-ms="39882" started-at="2020-01-25T20:19:52Z" finished-at="2020-01-25T20:20:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="78357" started-at="2020-01-25T18:35:25Z" finished-at="2020-01-25T18:36:44Z">
+    <test name="TestingwithTestNG" duration-ms="39882" started-at="2020-01-25T20:19:52Z" finished-at="2020-01-25T20:20:32Z">
       <class name="testNGpackage.SmokeTests">
-        <test-method status="PASS" signature="setUpBrowser()[pri:-1, instance:testNGpackage.SmokeTests@29ee9faa]" name="setUpBrowser" duration-ms="69095" started-at="2020-01-26T00:05:26Z" description="This test is setting up the browser and printing the title" finished-at="2020-01-26T00:06:35Z">
+        <test-method status="FAIL" signature="setUpBrowser()[pri:-1, instance:testNGpackage.SmokeTests@cc285f4]" name="setUpBrowser" duration-ms="28842" started-at="2020-01-26T01:49:52Z" description="Setup the browser and get page title of base URL" finished-at="2020-01-26T01:50:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Loading...] but found [GPComply]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Loading...] but found [GPComply]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at testNGpackage.SmokeTests.setUpBrowser(SmokeTests.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="verifyPageTitle()[pri:0, instance:testNGpackage.SmokeTests@29ee9faa]" name="verifyPageTitle" duration-ms="17" started-at="2020-01-26T00:06:35Z" description="This test will get the title of the page " finished-at="2020-01-26T00:06:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPageTitle -->
-        <test-method status="PASS" signature="loginOnUat()[pri:1, instance:testNGpackage.SmokeTests@29ee9faa]" name="loginOnUat" duration-ms="9134" started-at="2020-01-26T00:06:35Z" description="This test will enter username,password and then login" finished-at="2020-01-26T00:06:44Z">
+        <test-method status="PASS" signature="loginOnUat()[pri:0, instance:testNGpackage.SmokeTests@cc285f4]" name="loginOnUat" duration-ms="2478" started-at="2020-01-26T01:50:21Z" description="This test will enter username,password and then click sign in" finished-at="2020-01-26T01:50:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginOnUat -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:1, instance:testNGpackage.SmokeTests@cc285f4]" name="verifyPageTitle" duration-ms="17" started-at="2020-01-26T01:50:24Z" description="Verify the page title after login" depends-on-methods="testNGpackage.SmokeTests.loginOnUat" finished-at="2020-01-26T01:50:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="logoOnClientList()[pri:2, instance:testNGpackage.SmokeTests@cc285f4]" name="logoOnClientList" duration-ms="7684" started-at="2020-01-26T01:50:24Z" description="Verify the logo on client list page" depends-on-methods="testNGpackage.SmokeTests.loginOnUat" finished-at="2020-01-26T01:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoOnClientList -->
+        <test-method status="PASS" signature="settingsMenuList()[pri:3, instance:testNGpackage.SmokeTests@cc285f4]" name="settingsMenuList" duration-ms="448" started-at="2020-01-26T01:50:32Z" description="Verify the Settings Menu Items" depends-on-methods="testNGpackage.SmokeTests.loginOnUat" finished-at="2020-01-26T01:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingsMenuList -->
+        <test-method status="SKIP" signature="searchingClient(java.lang.String)[pri:4, instance:testNGpackage.SmokeTests@cc285f4]" name="searchingClient" duration-ms="0" started-at="2020-01-26T01:50:32Z" data-provider="searchtexts" finished-at="2020-01-26T01:50:32Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() must return either Object[][] or Iterator<Object>[], not class [Ljava.lang.String;]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() must return either Object[][] or Iterator<Object>[], not class [Ljava.lang.String;
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:115)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1240)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:980)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1070)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchingClient -->
       </class> <!-- testNGpackage.SmokeTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TestingwithTestNG -->
+  </suite> <!-- Suite -->
 </testng-results>
