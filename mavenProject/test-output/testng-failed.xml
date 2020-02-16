@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="TestingwithTestNG(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="TestingwithTestNG(failed)">
     <classes>
       <class name="testNGpackage.SmokeTests">
         <methods>
           <include name="setUpBrowser"/>
-          <include name="searchingClient"/>
+          <include name="loginOnUat"/>
+          <include name="logoOnClientList"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- testNGpackage.SmokeTests -->
     </classes>

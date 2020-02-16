@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Nitin Shukla\MyProjects\POMFramework\mavenProject\testNGfile.xml</span>
+                    <span>C:\Users\Nitin Shukla\git\POMFramework\mavenProject\testNGfile.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,  1 skipped,  4 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,24 +102,10 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testNGpackage.SmokeTests" hash-for-method="setUpBrowser">setUpBrowser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testNGpackage.SmokeTests" hash-for-method="logoOnClientList">logoOnClientList</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testNGpackage.SmokeTests" hash-for-method="searchingClient">searchingClient</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -135,7 +121,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testNGpackage.SmokeTests" hash-for-method="logoOnClientList">logoOnClientList</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testNGpackage.SmokeTests" hash-for-method="searchingClient">searchingClient</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,38 +154,51 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="setUpBrowser">
-                  </a> <!-- setUpBrowser -->
-                  <span class="method-name">setUpBrowser</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Loading...] but found [GPComply]
-	at testNGpackage.SmokeTests.setUpBrowser(SmokeTests.java:48)
+                  <a name="logoOnClientList">
+                  </a> <!-- logoOnClientList -->
+                  <span class="method-name">logoOnClientList</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;homepage&apos;]&quot;}
+  (Session info: chrome=80.0.3987.106)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-I5I325BH&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.106, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\NITINS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50434}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 736ceb4f47e9af1a777be21f9ed8f801
+*** Element info: {Using=xpath, value=//img[@alt=&apos;homepage&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+	at pageObjects.clientListPage.checkLogoOnClientList(clientListPage.java:28)
+	at testNGpackage.SmokeTests.logoOnClientList(SmokeTests.java:92)
+	at java.util.ArrayList.forEach(Unknown Source)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(Setup the browser and get page title of base URL)                  </em>
+(Verify the logo on client list page)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">testNGpackage.SmokeTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchingClient">
-                  </a> <!-- searchingClient -->
-                  <span class="method-name">searchingClient</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() must return either Object[][] or Iterator&lt;Object&gt;[], not class [Ljava.lang.String;
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -217,11 +216,9 @@ Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() mu
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="logoOnClientList">
-                  </a> <!-- logoOnClientList -->
-                  <span class="method-name">logoOnClientList</span>
-                  <em>
-(Verify the logo on client list page)                  </em>
+                  <a name="searchingClient">
+                  </a> <!-- searchingClient -->
+                  <span class="method-name">searchingClient</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -247,14 +244,14 @@ Data Provider public java.lang.String[] testNGpackage.SmokeTests.createData() mu
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Nitin Shukla\MyProjects\POMFramework\mavenProject\testNGfile.xml</span>
+            <span class="header-content">C:\Users\Nitin Shukla\git\POMFramework\mavenProject\testNGfile.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;TestingwithTestNG&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TestingwithTestNG&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testNGpackage.SmokeTests&quot;/&gt;
     &lt;/classes&gt;
@@ -296,31 +293,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'setUpBrowser')
+data.setCell(0, 1, 'logoOnClientList')
 data.setCell(0, 2, 'testNGpackage.SmokeTests')
-data.setCell(0, 3, 28842);
+data.setCell(0, 3, 20128);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'logoOnClientList')
+data.setCell(1, 1, 'settingsMenuList')
 data.setCell(1, 2, 'testNGpackage.SmokeTests')
-data.setCell(1, 3, 7684);
+data.setCell(1, 3, 15276);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginOnUat')
 data.setCell(2, 2, 'testNGpackage.SmokeTests')
-data.setCell(2, 3, 2478);
+data.setCell(2, 3, 3881);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'settingsMenuList')
+data.setCell(3, 1, 'searchingClient')
 data.setCell(3, 2, 'testNGpackage.SmokeTests')
-data.setCell(3, 3, 448);
+data.setCell(3, 3, 415);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyPageTitle')
 data.setCell(4, 2, 'testNGpackage.SmokeTests')
-data.setCell(4, 3, 17);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'searchingClient')
-data.setCell(5, 2, 'testNGpackage.SmokeTests')
-data.setCell(5, 3, 0);
+data.setCell(4, 3, 14);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -352,28 +345,36 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">testNGpackage.SmokeTests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
+              <div class="configuration-suite before">
                 <span class="method-name">setUpBrowser</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">loginOnUat</span>
-                <span class="method-start">28942 ms</span>
+                <span class="method-start">15958 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyPageTitle</span>
-                <span class="method-start">31617 ms</span>
+                <span class="method-start">19859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">logoOnClientList</span>
-                <span class="method-start">31639 ms</span>
+                <span class="method-start">19876 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">settingsMenuList</span>
-                <span class="method-start">39329 ms</span>
+                <span class="method-start">40016 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchingClient</span>
+                <span class="method-start">55299 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">55817 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

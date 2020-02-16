@@ -27,7 +27,7 @@ public class PropertiesManager {
 	Properties propobj=new Properties();
 	static PropertiesManager  instance; //add the instance of this file for calling it in other test cases
 	
-	static String filepath= "C:\\Nitin Shukla\\MyProjects\\POMFramework\\mavenProject\\src\\test\\resources\\config\\configProperties.properties";
+	static String filepath= "C:\\Users\\Nitin Shukla\\git\\POMFramework\\mavenProject\\src\\test\\resources\\config\\configProperties.properties";
 	
 	//Step 2: Create a method that initializes the instance of the Properties Manager file
 	

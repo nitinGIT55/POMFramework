@@ -47,7 +47,7 @@ public class SmokeTests
 		driver.manage().deleteAllCookies();
 		driver.get(baseurl);
 		String page_title=driver.getTitle();
-		//Assert.assertEquals("GPComplyLogin", page_title);
+		Assert.assertEquals(page_title,"GPComplyLogin");
 		if( page_title.contains("GPComply")) {
 		System.out.println("The correct page has been loaded successfully");
 		}
@@ -58,7 +58,7 @@ public class SmokeTests
 		
 
 	
-	@Test (priority=1, description="Verify the page title after login", dependsOnMethods= {"loginOnUat"})
+	@Test (description="Verify the page title after login", dependsOnMethods= {"loginOnUat"})
 	public void verifyPageTitle() {
 
 		onLoginPage.getLoginPageTitle();
@@ -68,19 +68,20 @@ public class SmokeTests
 		
 	@Test (priority=0, description="This test will enter username,password and then click sign in")
 	public void loginOnUat () {
-		int a;
+		boolean a;
 		
 		try {
 			onLoginPage.enterUserName(username);
 			onLoginPage.enterPassword(password);
 			onLoginPage.clickSignIn();
-			a=1;
+			a=true;
 		} catch (Exception e) {
 			System.out.println("Test Case didnot pass and Exception occured while execution: "+e);
-			a=0;
+			a=false;
 		}
-		if(a==1)
-		System.out.println("User"+username+" has logged in successfully !!");
+		if(a==true)
+		System.out.println("User "+username+" has logged in successfully !!");
+		Assert.assertEquals(a, true);
 		
 		
 	}

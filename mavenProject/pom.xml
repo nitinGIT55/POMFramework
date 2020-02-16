@@ -32,7 +32,6 @@
         <version>1.6.0</version>
         <executions>
           <execution>
-            ...
             <goals>
               <goal>exec</goal>
             </goals>
@@ -45,7 +44,6 @@
           <arguments>
             <argument>-X</argument>
             <argument>myproject:dist</argument>
-            ...
           </arguments>
         </configuration>
       </plugin>
